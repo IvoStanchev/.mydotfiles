@@ -1,0 +1,92 @@
+window:
+  # Blank space added around the window in pixels. This padding is scaled
+  # by DPI and the specified value is always added at both opposing sides.
+  decorations: none
+  startup_mode: Maximized
+  padding:
+    x: 10
+    y: 10
+scrolling:
+  # Specifying '0' will disable scrolling.
+  history: 100000
+  # Number of lines the viewport will move for every line scrolled when
+  # scrollback is enabled (history > 0).
+  multiplier: 3
+font:
+  normal:
+    family: Menlo
+    style: Regular
+  bold:
+    family: Menlo
+    style: Bold
+  italic:
+    family: Menlo
+    style: Italic
+  bold_italic:
+    family: Menlo
+    style: Bold Italic
+  size: 18.0
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+# Base16 Default Dark 256 - alacritty color config
+# Chris Kempson (http://chriskempson.com)
+colors:
+  # Default colors
+  primary:
+    background: '0x24292e'
+    foreground: '0xd1d5da'
+
+  # Normal colors
+  normal:
+    black: '0x24292e'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xe2e210'
+    blue: '0x3b8eea'
+    magenta: '0xbc3fbc'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  # Bright colors
+  bright:
+    black: '0x666666'
+    red: '0xf14c4c'
+    green: '0x23d18b'
+    yellow: '0xf5f543'
+    blue: '0x3b8eea'
+    magenta: '0xd670d6'
+    cyan: '0x29b7da'
+    white: '0xd1d5da'
+
+  indexed_colors:
+    - { index: 16, color: '0xd18616' }
+    - { index: 17, color: '0xf14c4c' }
+# Specifying a `duration` of `0` will disable the visual bell.
+bell:
+  animation: EaseOutExpo
+  duration: 300
+  color: '0xffffff'
+window.opacity: 0.99
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+# Allow terminal applications to change Alacritty’s window title.
+window.dynamic_title: true
+cursor:
+  style: Block
+  unfocused_hollow: true
+# Live config reload (changes require restart)
+live_config_reload: true
+# Enable clickable URLs
+mouse:
+  hints:
+    launcher:
+      program: open
+    modifiers: Command
+key_bindings:
+  - { key: Right, mods: Alt, chars: "\eF" }
+  - { key: Left, mods: Alt, chars: "\eB" }
+theme: github_dark

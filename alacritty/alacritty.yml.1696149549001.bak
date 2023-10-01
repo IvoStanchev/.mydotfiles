@@ -1,0 +1,93 @@
+env:
+  TERM: xterm-256color
+window:
+  dynamic_title: true
+  opacity: 0.95
+  decorations: none
+  startup_mode: Maximized
+  padding:
+    x: 10
+    y: 10
+shell: null
+#  program: /opt/homebrew/bin/fish
+scrolling:
+  history: 100000
+  multiplier: 3
+font:
+  normal:
+    family: SauceCodePro Nerd Font Mono
+    style: Regular
+
+  bold:
+    family: SauceCodePro Nerd Font Mono
+    style: Bold
+
+  italic:
+    family: SauceCodePro Nerd Font Mono
+    style: Italic
+
+  size: 18.0
+
+  scale_with_dpi: true
+draw_bold_text_with_bright_colors: true
+# Base16 Default Dark 256 - alacritty color config
+# Chris Kempson (http://chriskempson.com)
+colors:
+  # Default colors
+  primary:
+    background: '#002b36' # base03
+    foreground: '#839496' # base0
+
+  # Cursor colors
+  cursor:
+    text: '#002b36' # base03
+    cursor: '#839496' # base0
+
+  # Normal colors
+  normal:
+    black: '#073642' # base02
+    red: '#dc322f' # red
+    green: '#859900' # green
+    yellow: '#b58900' # yellow
+    blue: '#268bd2' # blue
+    magenta: '#d33682' # magenta
+    cyan: '#2aa198' # cyan
+    white: '#eee8d5' # base2
+
+  # Bright colors
+  bright:
+    black: '#002b36' # base03
+    red: '#cb4b16' # orange
+    green: '#586e75' # base01
+    yellow: '#657b83' # base00
+    blue: '#839496' # base0
+    magenta: '#6c71c4' # violet
+    cyan: '#93a1a1' # base1
+    white: '#fdf6e3' # base3
+# Specifying a `duration` of `0` will disable the visual bell.
+bell:
+  animation: EaseOutExpo
+  duration: 300
+  color: '0xffffff'
+selection:
+  # This string contains all characters that are used as separators for
+  # "semantic words" in Alacritty.
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+# Allow terminal applications to change Alacritty’s window title.
+cursor:
+  style: Block
+  unfocused_hollow: true
+# Live config reload (changes require restart)
+live_config_reload: true
+# Enable clickable URLs
+mouse:
+  hints:
+    launcher:
+      program: open
+    modifiers: Command
+key_bindings:
+  - { key: Right, mods: Alt, chars: "\eF" }
+  - { key: Left, mods: Alt, chars: "\eB" }
+theme: Solarized-Dark
